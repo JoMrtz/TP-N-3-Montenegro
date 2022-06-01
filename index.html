@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>estrella</title>
+</head>
+<body>
+    <img src="img/ev_b.png" class="estrellas" id="e1" alt="">
+    <img src="img/ev_b.png" class="estrellas" id="e2" alt="">
+    <img src="img/ev_b.png" class="estrellas" id="e3" alt="">
+    <img src="img/ev_b.png" class="estrellas" id="e4" alt="">
+    <img src="img/ev_b.png" class="estrellas" id="e5" alt="">
+    
+    <script src="js/jquery-3.2.1.min.js"></script>
+    <script>
+        $(document).ready(function(){
+            var votos = 0;
+            var cantVotos = 0;
+            console.log("vamo");
+            $('#e1').on('mouseover',function() {iluminar(1)});
+            $('#e2').on('mouseover',function() {iluminar(2)});
+            $('#e3').on('mouseover',function() {iluminar(3)});
+            $('#e4').on('mouseover',function() {iluminar(4)});
+            $('#e5').on('mouseover',function() {iluminar(5)});
+            
+            $('.estrellas').on('mouseout', volver);
+            
+            function
+            
+            
+            function volver(){
+                console.log("vuelvo")
+                $('.estrellas').attr('src', 'img/ev_b.png')
+                promedio = cantVotos/votos
+            }
+            function iluminar(num){
+                console.log("ilumino"+num)
+                $('.estrellas').attr('src', 'img/ev_b.png')
+                for(i=1; i <= num;i++){
+                    $('#e'+i).attr('src', 'img/ec_b.png')
+                }
+            }
+    
+
+
+
+
+
+
+})
+    </script>
+</body>
+</html>
